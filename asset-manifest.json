@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/csh20000.github.io/static/css/main.f3a494fd.css",
+    "main.js": "/csh20000.github.io/static/js/main.922baf0d.js",
+    "index.html": "/csh20000.github.io/index.html",
+    "main.f3a494fd.css.map": "/csh20000.github.io/static/css/main.f3a494fd.css.map",
+    "main.922baf0d.js.map": "/csh20000.github.io/static/js/main.922baf0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3a494fd.css",
+    "static/js/main.922baf0d.js"
+  ]
+}
