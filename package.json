@@ -1,4 +1,5 @@
 {
+  "homepage": "http://csh20000.github.io/csh20000.github.io",
   "name": "csh20000.github.io",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,7 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.14",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10"
   },
@@ -17,6 +19,8 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
