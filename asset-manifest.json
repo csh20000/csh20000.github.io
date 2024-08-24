@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/csh20000.github.io/static/css/main.f3a494fd.css",
-    "main.js": "/csh20000.github.io/static/js/main.922baf0d.js",
-    "index.html": "/csh20000.github.io/index.html",
-    "main.f3a494fd.css.map": "/csh20000.github.io/static/css/main.f3a494fd.css.map",
-    "main.922baf0d.js.map": "/csh20000.github.io/static/js/main.922baf0d.js.map"
+    "main.css": "/static/css/main.f3a494fd.css",
+    "main.js": "/static/js/main.a7b5f8e8.js",
+    "index.html": "/index.html",
+    "main.f3a494fd.css.map": "/static/css/main.f3a494fd.css.map",
+    "main.a7b5f8e8.js.map": "/static/js/main.a7b5f8e8.js.map"
   },
   "entrypoints": [
     "static/css/main.f3a494fd.css",
-    "static/js/main.922baf0d.js"
+    "static/js/main.a7b5f8e8.js"
   ]
 }
