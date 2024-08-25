@@ -2,7 +2,7 @@
 import React from 'react';
 import { FiGithub } from 'react-icons/fi';
 
-const ProjectItem = ({ title, description, imageUrl, techStack, githubUrl, extensionUrl }) => (
+const ProjectItem = ({ title, description, imageUrl, techStack, githubUrl}) => (
   <div className='max-w-5xl md:px-4 py-8 pb-32 mx-auto space-y-28'>
     <section className='p-4 md:p-8 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-2xl'>
       <h1 className='font-bold text-lg md:text-xl text-blue-500 pb-4'>{title}</h1>
@@ -11,6 +11,9 @@ const ProjectItem = ({ title, description, imageUrl, techStack, githubUrl, exten
           <img src={imageUrl} layout='fill' objectFit='contain' alt='' />
         </div>
         <blockquote className='sm:col-span-2'>
+          <p className='text-xs md:text-base'>
+          {description}
+          </p>
           <cite className='inline-flex items-center mt-8 not-italic'>
             <span className='hidden w-6 h-px bg-gray-400 sm:inline-block'></span>
             <p className='text-xs md:text-base text-gray-500 sm:ml-3'>
@@ -18,11 +21,13 @@ const ProjectItem = ({ title, description, imageUrl, techStack, githubUrl, exten
             </p>
           </cite>
           <div className='flex pt-8 space-x-4'>
-            <div>
-              <a href={githubUrl} target='_blank' rel='noopener noreferrer'>
-                <FiGithub size='30px' />
-              </a>
-            </div>
+            {githubUrl && (
+              <div>
+                <a href={githubUrl} target='_blank' rel='noopener noreferrer'>
+                  <FiGithub size='30px' />
+                </a>
+              </div>
+            )}
           </div>
         </blockquote>
       </div>

@@ -50,7 +50,7 @@ const About = () => {
                     <div className="relative w-3/4 h-80">
                         <img
                         src="/images/me.jpg"
-                        alt="Cary"
+                        alt="me.jpg"
                         className="rounded-lg shadow-lg object-cover w-full h-full"
                       />
                     </div>

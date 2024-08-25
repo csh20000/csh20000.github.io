@@ -5,6 +5,7 @@ import Navbar from './components/Navbar.js';
 import Home from './pages/Home.js';
 import About from './pages/about.js';
 import Contact from './pages/contact.js';
+import Projects from './pages/projects.js';
 
 const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -27,6 +28,7 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
     </div>
   );
