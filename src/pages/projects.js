@@ -36,18 +36,25 @@ const projects = [
     techStack: 'Java, HTML, CSS'
   },
   {
-    title: 'Academic Options Website',
-    description: 'This is the site you are currently on. A fun small site demonstrating some of my work.',
-    imageUrl: '/images/construction.jpg',
-    techStack: 'Java, HTML, CSS',
-    githubUrl: 'https://github.com/StinkyCat0/MHacks-2023-Project'
-  },
-  {
     title: 'Virtual Piano',
     description: 'This is the site you are currently on. A fun small site demonstrating some of my work.',
     imageUrl: '/images/construction.jpg',
     techStack: 'Java, HTML, CSS',
     githubUrl: 'https://github.com/csh20000/csh20000.github.io'
+  },
+  {
+    title: 'Adaptive Cruise Control System',
+    description: `Developed and simulated an adaptive cruise control system allowing different
+    vehicles to interact over a network with haptic inputs and feedback to the user.`,
+    imageUrl: '/images/construction.jpg',
+    techStack: 'MATLAB, Simulink, NXP S32K144 Microcontroller'
+  },
+  {
+    title: 'Academic Options Website',
+    description: 'This is the site you are currently on. A fun small site demonstrating some of my work.',
+    imageUrl: '/images/construction.jpg',
+    techStack: 'Java, HTML, CSS',
+    githubUrl: 'https://github.com/StinkyCat0/MHacks-2023-Project'
   },
   {
     title: 'Optical Flow Mapping and Predition',

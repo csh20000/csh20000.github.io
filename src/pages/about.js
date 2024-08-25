@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
 
+
+
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col lg:pl-20 lg:pr-32 bg-white dark:bg-gray-800 dark:text-white">
