@@ -63,14 +63,14 @@ const projects = [
     techStack: 'Java, HTML, CSS',
     githubUrl: 'https://github.com/csh20000/csh20000.github.io'
   },
-  // Add more project objects here
 ];
 
 const Projects = () => (
-    <div className='h-screen mx-5 sm:mx-auto pt-32 dark:text-white dark:bg-gray-800'>
+    <div className='min-h-screen mx-5 sm:mx-auto pt-32 dark:text-white dark:bg-gray-800'>
         <h1 className='font-bold text-3xl text-center text-black'>Projects</h1>
         {projects.map((project, index) => (
         <ProjectItem
+            className='dark:bg-gray-800'
             key={index}
             title={project.title}
             description={project.description}
