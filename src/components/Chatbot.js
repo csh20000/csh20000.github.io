@@ -1,38 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { OpenAI } from 'openai';
 
 const Chatbot = () => {
     const [input, setInput] = useState('');
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([{ role: "system", content: "You are a helpful assistant." }]);
 
-    // const configuration = new Configuration({
-    //     apiKey: 'YOUR_OPENAI_API_KEY',
-    // });
-    const openai = new OpenAI({apiKey : 'NONE', dangerouslyAllowBrowser: true });
-    //openai.apiKey = ;
+    const openai = new OpenAI({ apiKey : '<api key goes here>', dangerouslyAllowBrowser: true });
 
     const handleSend = async () => {
+        console.log('INPUT:', input.trim());
         if (input.trim() === '') return;
 
-        const userMessage = { sender: 'user', text: input };
-        setMessages([...messages, userMessage]);
+        const userMessage = { role: 'user', content: input };
+        const updatedMessages = [...messages, userMessage];
+        setMessages(updatedMessages);
 
         try {
-            const response = await openai.chat.completions.create({
-                model: 'gpt-4o-mini',
-                prompt: input,
-                max_tokens: 150,
-                n: 1,
-                stop: null,
-                temperature: 0.7,
+            console.log('Sending request to OpenAI API...');
+            const completion = await openai.chat.completions.create({
+                model: 'gpt-3.5-turbo',
+                messages: updatedMessages
             });
-            console.log('API Response:', response.data);
-            const botMessage = { sender: 'bot', text: response.data.choices[0].text.trim() };
-            setMessages([...messages, userMessage, botMessage]);
+            console.log('API Response:', completion.choices[0]);
+            const botMessage = { role: 'assistant', content: completion.choices[0].message.content.trim() };
+            setMessages([...updatedMessages, botMessage]);
         } catch (error) {
             console.error('Error:', error);
-            const botMessage = { sender: 'bot', text: "Sorry, this service is currently unavailable. Contact host for more information." };
-            setMessages([...messages, userMessage, botMessage]);
+            const botMessage = { role: 'assistant', content: "Sorry, this service is currently unavailable. Contact host for more information." };
+            setMessages([...updatedMessages, botMessage]);
         }
 
         setInput('');
@@ -41,18 +36,18 @@ const Chatbot = () => {
     return (
         <div className='w-100'>
             <div className="messages space-y-4 p-3 text-sm rounded-lg border border-black bg-white h-64 overflow-y-auto">
-                {messages.map((message, index) => (
-                    <div
-                        key={index}
-                        className={`message ${message.sender} ${
-                            message.sender === 'user' ? 'text-right' : 'text-left'
-                        }`}
-                    >
-                        {message.text}
-                    </div>
-                ))}
+            {messages.filter(message => message.role !== 'system').map((message, index) => (
+                <div
+                    key={index}
+                    className={`message ${message.role} ${
+                        message.role === 'user' ? 'text-right' : 'text-left'
+                    }`}
+                >
+                    {message.content}
+                </div>
+            ))}
             </div>
-            <div  className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4">
                 <input
                     placeholder="Message"
                     className='w-full p-3 text-sm rounded-lg border border-black'
