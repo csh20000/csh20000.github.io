@@ -29,20 +29,20 @@ const Home = () => {
                     {/* <h1 className='text-4xl text-blue-500 font-extrabold md:text-6xl'>
                         Data Analyst
                     </h1> */}
-                    <p className='text-sm mt-4 sm:leading-relaxed md:text-xl text-black dark:text-white'>
+                    {/* <p className='text-sm mt-4 sm:leading-relaxed md:text-xl text-black dark:text-white'>
                         Start chatting with AI Cary!
                     </p>
-                    <Chatbot />
+                    <Chatbot /> */}
                     <div className='flex flex-wrap justify-center gap-4 mt-8 grid-cols-2'>
                         <Link to='/contact'>
                             <button
                                 className='px-12 py-3 text-sm font-medium text-culturedWhite bg-mnBlue rounded shadow active:bg-blue-500 hover:bg-carolinaBlue focus:outline-none focus:ring'
                             >
-                                Contact (Real) Me
+                                Contact Me
                             </button>
                         </Link>
                         <a
-                            href='/resume.pdf'
+                            href='./resume.pdf'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='px-12 py-3 text-sm font-medium text-culturedWhite bg-mnBlue rounded shadow active:bg-blue-500 hover:bg-carolinaBlue focus:outline-none focus:ring'
