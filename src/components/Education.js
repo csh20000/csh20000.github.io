@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const education = [
   {
     title: 'Personal Website',
-    description: 'This is the site you are currently on. A fun small site demonstrating some of my work.',
+    description: 'This is the site you are currently on. Created to demonstrate some of my work.',
     imageUrl: '/images/me.jpg',
     techStack: 'Java, HTML, CSS',
     githubUrl: 'https://github.com/csh20000/csh20000.github.io'
